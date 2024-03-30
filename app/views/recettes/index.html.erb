@@ -1,0 +1,9 @@
+<h1>Mes recettes :</h1>
+<ul>
+  <% @recettes.each do |recette| %>
+    <li><%= link_to recette.name, recette_path(recette) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Retour à l'Accueil", root_path %>
+<%= link_to "Ajouter une nouvelle recette", new_recette_path(@recette) %>

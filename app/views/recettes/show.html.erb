@@ -1,0 +1,10 @@
+<h2><%= @recette.name %></h2>
+<p><%= @recette.descrition %></p>
+
+<%= link_to "Delete",
+  recette_path(@recette),
+  data: {turbo_method: :delete, turbo_confirm: "Etes vous sûr ?"}
+%>
+
+<%= link_to "Edit", edit_recette_path(@recette) %>
+<%= link_to "Retour aux recettes", recettes_path %>
