@@ -1,6 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: lightblue;
+  background: rgba(27, 26, 26, 0.99);
+  color: white;
+  padding: 0.5rem 1.875rem 0.5rem 1.875rem;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +14,12 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.links-container {
+  padding: 60px; /* Ajoutez votre padding souhaité */
+}
+
+.navbar-lewagon .nav-link {
+  color: white !important; /* Force la couleur du texte en blanc */
 }

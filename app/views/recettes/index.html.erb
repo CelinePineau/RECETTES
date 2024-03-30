@@ -1,10 +1,12 @@
-<h1>Mes recettes :</h1>
+<h1>Mes recettes</h1>
+<%= link_to "Voir les recettes par ingrédient choisi", select_recettes_path %>
 <ul>
   <% @recettes.each do |recette| %>
-    <li><%= link_to recette.name, recette_path(recette) %></li>
+
+      <%= link_to recette.name, recette_path(recette), class: "btn btn-menu" %><br>
+
   <% end %>
 </ul>
 
 <%= link_to "Retour à l'Accueil", root_path %>
 <%= link_to "Ajouter une nouvelle recette", new_recette_path(@recette) %>
-<%= link_to "Voir les recettes par ingrédient choisi", select_recettes_path %>

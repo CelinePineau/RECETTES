@@ -1,0 +1,15 @@
+.btn-menu {
+  background-color: transparent; /* Bouton transparent */
+  border: 1px solid lightblue; /* Bord bleu clair */
+  border-radius: 5px; /* Pour arrondir un peu le bouton */
+  padding: 10px 20px; /* Ajoutez de l'espace autour du texte */
+  color: gray; /* Texte gris */
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  transition: background-color 0.3s ease; /* Animation de transition */
+  margin: 10px;
+  width: 200px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Fond légèrement ombragé au survol */
+  }
+}

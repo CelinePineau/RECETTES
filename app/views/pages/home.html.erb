@@ -1,6 +1,14 @@
-<h1>Bienvenue sur mon site de recettes</h1>
-
-<%= link_to "Know more about us", about_path %>
-<%= link_to "Meet our team", contact_path %>
-
-<%= link_to "Voir toutes les recettes", recettes_path %>
+ <div class="banner">
+  <div class="container1">
+    <h1>Bienvenue sur mon site de recettes</h1>
+    <div>
+      <div class="links-container">
+        <%= link_to "Voir toutes les recettes", recettes_path, class: "btn-menu" %>
+      </div>
+      <div style="padding-top: 20px">
+        <%= link_to "Know more about us", about_path %>
+        <%= link_to "Meet our team", contact_path %>
+      </div>
+    </div>
+  </div>
+</div>
