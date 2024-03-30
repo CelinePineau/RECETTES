@@ -9,13 +9,12 @@ class RecettesController < ApplicationController
   end
 
   def new
-    @recette = Recette.new # Needed to instantiate the form_with
+    @recette = Recette.new
   end
 
   def create
     @recette = Recette.new(recette_params)
     @recette.save
-    # No need for app/views/recettes/create.html.erb
     redirect_to recette_path(@recette)
   end
 
@@ -26,15 +25,18 @@ class RecettesController < ApplicationController
   def update
     @recette = Recette.find(params[:id])
     @recette.update(recette_params)
-    # No need for app/views/recettes/update.html.erb
     redirect_to recette_path(@recette)
   end
 
   def destroy
     @recette = Recette.find(params[:id])
     @recette.destroy
-    # No need for app/views/recettes/destroy.html.erb
     redirect_to recettes_path, status: :see_other
+  end
+
+  def select
+    keyword = params[:descrition]
+    @recettes = Recette.where("descrition LIKE ?", "%#{keyword}%")
   end
 
   private

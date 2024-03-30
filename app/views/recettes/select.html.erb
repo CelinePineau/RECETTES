@@ -1,0 +1,18 @@
+<h1>Trouver une recette avec un ingrédient choisi</h1>
+
+<%= simple_form_for("", url: select_recettes_path, method: :get) do |f| %>
+  <%= f.input :descrition, label: "Mot clé :" %>
+  <%= f.submit "Rechercher" %>
+<% end %>
+
+<div id="recettes">
+  <% @recettes.each do |recette| %>
+    <div class="recette">
+      <h2><%= recette.name %></h2>
+      <p><%= recette.descrition %></p>
+    </div>
+    <p>
+      <%= link_to "Montre moi cette recette", recette %>
+    </p>
+  <% end %>
+</div>
