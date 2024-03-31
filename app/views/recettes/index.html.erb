@@ -1,5 +1,5 @@
 <h1>Mes recettes</h1>
-<%= link_to "Voir les recettes par ingrédient choisi", select_recettes_path, class: "lien", style: "color: black;" %>
+<%= link_to "Voir les recettes par ingrédient choisi", select_recettes_path, class: "lien" %>
 <ul>
   <% @recettes.each do |recette| %>
 
@@ -8,5 +8,5 @@
   <% end %>
 </ul>
 
-<%= link_to "Retour à l'Accueil", root_path, class: "lien", style: "color: black;" %>
-<%= link_to "Ajouter une nouvelle recette", new_recette_path(@recette), class: "lien", style: "color: black;" %>
+<%= link_to "Retour à l'Accueil |", root_path, class: "lien" %>
+<%= link_to " Ajouter une nouvelle recette", new_recette_path(@recette), class: "lien" %>
